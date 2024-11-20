@@ -1,0 +1,87 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Encabezado de la tabla */
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #007bff;
+    text-align: center;
+    animation: fadeInDown 1s;
+}
+
+/* Estilos para la tabla */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    vertical-align: middle;
+    transition: all 0.3s;
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: #fff;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+    transform: scale(1.02);
+}
+
+.table td {
+    border-top: 1px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Iconos de medallas */
+.bi-award-fill {
+    font-size: 20px;
+}
+
+/* Centrar el contenido de la tabla */
+.center {
+    text-align: center;
+}
+
+/* Estilo para los números de posición */
+.table td:nth-child(1) {
+    font-weight: bold;
+    color: #343a40;
+}
+
+/* Efectos de entrada */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

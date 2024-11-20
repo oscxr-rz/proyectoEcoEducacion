@@ -1,0 +1,73 @@
+{% extends "nav/nav.html" %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'login/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+{% endblock head %}
+{% block contenido %}
+    <img class="wave" src="{% static 'login/img/wave.png' %}">
+    <div class="container">
+        <div class="img">
+            <img src="{% static 'login/img/bg.png' %}">
+        </div>
+        <div class="login-content">
+            <form method="post" action="{% url 'register' %}">
+                {% csrf_token %}
+                <img src="{% static 'login/img/avatar.svg' %}">
+                <h2 class="title">Registrar un administrador</h2>
+                <div class="input-div one">
+                    <div class="i">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="div">
+                        <input type="text" name="username" class="input" placeholder="Nombre de Usuario" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="div">
+                        <input type="email" name="email" class="input" placeholder="Correo Electrónico" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <input type="password" name="password" class="input" placeholder="Contraseña" required>
+                    </div>
+                </div>
+                <div class="input-div pass">
+                    <div class="i">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div class="div">
+                        <input type="password" name="password_confirm" class="input" placeholder="Confirmar Contraseña" required>
+                    </div>
+                </div>
+                {% if form.errors %}
+                    <ul class="errorlist">
+                        {% for field in form %}
+                            {% for error in field.errors %}
+                                <li>{{ error }}</li>
+                            {% endfor %}
+                        {% endfor %}
+                        {% for error in form.non_field_errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                <input type="submit" class="btn btn-primary btn-block" value="Registrar">
+                <input type="reset" class="btn btn-secondary btn-block" value="Limpiar">
+            </form>
+        </div>
+    </div>
+{% endblock contenido %}
+{% block blockjs %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrap.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'login/js/main.js' %}"></script>
+{% endblock blockjs %}

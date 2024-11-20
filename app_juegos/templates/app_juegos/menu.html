@@ -1,0 +1,33 @@
+{% extends "nav/navbase.html" %}
+{% load static %}
+{% block contenido %}
+
+<!-- casino -->
+<div id="game" class="casino" style="min-height: 100vh;" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="titlepage">
+                    <h2>Bienvenido, {{ usuario.nombre }}!</h2>
+                    <span></span>
+                    <br>
+                    <h2 style="font-size: 200%;">Juegos disponibles</h2>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-4 padding_bottom">
+                <div class="game_box text-center">
+                    <figure><a href="{% url "quiz" %}"><img src="{% static 'menu/images/game1.jpg' %}" alt="#" class="img-fluid" /></a></figure>
+                </div>
+                <div class="game text-center">
+                    <h3><a href="{% url "quiz" %}">Juego de quiz</a></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end casino -->
+
+{% endblock contenido %}

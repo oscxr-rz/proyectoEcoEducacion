@@ -1,0 +1,48 @@
+{% extends "nav/nav.html" %}
+{% load static %}
+{% block contenido %}
+
+<!-- Page Heading -->
+<h1 class="h3 mb-2 text-gray-800">Resultados del Quiz</h1>
+<p class="mb-4">Esta tabla muestra cada pregunta del quiz, la cantidad de personas que respondieron y la cantidad de respuestas correctas.</p>
+
+<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Resultados del Quiz</h6>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Pregunta</th>
+                        <th>Cantidad de Personas que Respondieron</th>
+                        <th>Cantidad de Respuestas Correctas</th>
+                        <th>Porcentaje de Respuestas Correctas</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Pregunta</th>
+                        <th>Cantidad de Personas que Respondieron</th>
+                        <th>Cantidad de Respuestas Correctas</th>
+                        <th>Porcentaje de Respuestas Correctas</th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    {% for pregunta in preguntas %}
+                    <tr>
+                        <td>{{ pregunta.texto }}</td>
+                        <td>{{ pregunta.total_respuestas }}</td>
+                        <td>{{ pregunta.correctas }}</td>
+                        <td>{{ pregunta.porcentaje_correctas | floatformat:2 }}%</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock contenido %}

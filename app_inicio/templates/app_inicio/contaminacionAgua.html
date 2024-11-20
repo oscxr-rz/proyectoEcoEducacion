@@ -1,0 +1,124 @@
+{% extends "layouts/navbase.html" %}
+{% load static %}
+{% block contenido %}
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header2">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-4 text-white text-center text-uppercase">Contaminación del agua en Ocotlán de Morelos</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+
+
+
+    <div class="bg-white mb-4" style="padding: 30px; margin: 30px; width: calc(100% - 60px);">
+
+        <p>La contaminación del agua es un problema ambiental que afecta a muchas regiones en México, y Ocotlán de
+            Morelos, Oaxaca, no es la excepción. El municipio, que se encuentra cerca de importantes fuentes de agua
+            como ríos y manantiales, ha experimentado un deterioro de la calidad del agua debido a diversas actividades
+            humanas.</p>
+
+        <h1 class="mb-3" style="color: rgb(13, 13, 88);">Causas</h1>
+
+        <div style="margin: 30px;">
+            <h5 class="mb-3" style="color: rgb(78, 134, 255);">Vertidos industriales y domésticos</h5>
+            <img class="img-fluid float-left mr-4 mb-2" src="{% static "app_inicio/img/aguasReciduales.jpg" %}" style="width: 300px;">
+            <p>Una de las principales fuentes de contaminación del agua en Ocotlán es el vertido de aguas residuales
+                industriales y domésticas. Las pequeñas y medianas industrias en la región, como las de procesamiento de
+                caña de azúcar y las actividades de manufactura, carecen en muchos casos de sistemas de tratamiento
+                adecuados para sus efluentes. De manera similar, el vertido sin tratamiento de aguas residuales
+                domésticas en cuerpos de agua locales también contribuye a la contaminación. La combinación de estos
+                vertidos
+                aumenta los niveles de contaminantes como metales pesados, aceites, y detergentes en los ríos cercanos
+                (González &
+                Hernández, 2020).</p>
+        </div><br>
+
+        <div style="margin: 30px;">
+            <h5 class="mb-3" style="color: rgb(78, 134, 255);">Uso de pesticidas y fertilizantes en la agricultura</h5>
+            <img class="img-fluid float-left mr-4 mb-2" src="{% static "app_inicio/img/fertilizantes.jpg" %}" style="width: 300px;">
+            <p>Ocotlán, como muchas regiones en Oaxaca, depende de la agricultura para su economía local. El uso
+                intensivo de pesticidas y fertilizantes en cultivos agrícolas ha generado problemas relacionados con la
+                contaminación del agua subterránea y superficial. Los químicos utilizados para la protección de cultivos
+                y la fertilización se filtran en los cuerpos de agua cercanos, alterando los ecosistemas acuáticos y
+                afectando la calidad del agua para consumo humano (Córdoba et al., 2019).</p>
+        </div><br><br><br>
+
+        <div style="margin: 30px;">
+            <h5 class="mb-3" style="color: rgb(78, 134, 255);">Contaminación por residuos sólidos</h5>
+            <img class="img-fluid float-left mr-4 mb-2" src="{% static "app_inicio/img/reciduosSolidos.jpg" %}" style="width: 300px;">
+            <p>El manejo inadecuado de residuos sólidos también ha sido identificado como una causa relevante de la
+                contaminación del agua en Ocotlán. Los basureros a cielo abierto, tanto en áreas urbanas como rurales,
+                facilitan el escurrimiento de contaminantes hacia los cuerpos de agua. Esta contaminación por plásticos
+                y desechos sólidos orgánicos afecta no solo la calidad del agua, sino que también tiene repercusiones
+                para la fauna acuática (Gutiérrez et al., 2021).</p>
+        </div><br><br><br><br>
+
+        <h1 class="mb-3" style="color: rgb(13, 13, 88);">Efectos</h1>
+
+        <h5 class="mb-3" style="color: rgb(78, 134, 255);">Impacto en la salud pública</h5>
+        <img class="img-fluid float-right ml-4 mb-2" src="{% static "app_inicio/img/salud.jpg" %}" style="width: 300px;">
+        <p>Uno de los efectos más preocupantes de la contaminación del agua es el impacto en la salud pública. En
+            Ocotlán, el acceso a agua potable segura se ha visto comprometido debido a la presencia de patógenos y
+            contaminantes químicos en las fuentes de agua. El consumo de agua contaminada ha sido vinculado a brotes de
+            enfermedades gastrointestinales, como la diarrea y otras infecciones, especialmente entre niños y personas
+            vulnerables (Reyes et al., 2021). Además, la contaminación por metales pesados, como el plomo y el mercurio,
+            también puede tener efectos tóxicos crónicos a largo plazo.</p>
+<br>
+        <h5 class="mb-3" style="color: rgb(78, 134, 255);">Daños al medio ambiente</h5>
+        <img class="img-fluid float-right ml-4 mb-2" src="{% static "app_inicio/img/aguaSucia.jpg" %}" style="width: 300px;">
+        <p>Los ecosistemas acuáticos en la región de Ocotlán también se ven gravemente afectados por la contaminación
+            del agua. La alteración de la calidad del agua, incluyendo la reducción de oxígeno en los cuerpos de agua
+            debido a la alta carga orgánica, ha provocado la disminución de la biodiversidad acuática. Las especies de
+            peces y otros organismos acuáticos se ven amenazados por los altos niveles de contaminantes (Pérez &
+            González, 2022).</p>
+        <br><br><br><br>
+    </div>
+
+    <div class="bg-white" style="padding: 30px; margin-bottom: 30px; margin: 30px;">
+        <h1 class="mb-3  text-center" style="color: rgb(13, 13, 88);">Soluciones y medidas para mitigar la contaminación
+            del agua</h1>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/gota.webp" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: rgb(78, 134, 255);"><b>Tratamiento adecuado de aguas residuales</b></h6>
+                <p>Una de las soluciones más efectivas para mitigar la contaminación del agua en Ocotlán es la
+                    implementación de sistemas de tratamiento de aguas residuales, tanto industriales como domésticas.
+                    La construcción de plantas de tratamiento de aguas residuales permitiría reducir significativamente
+                    los vertidos contaminantes en los ríos y cuerpos de agua locales. Además, la educación sobre el
+                    manejo adecuado de aguas residuales entre la población es crucial para mejorar las condiciones del
+                    agua.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/gota.webp" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: rgb(78, 134, 255);"><b>Uso sostenible de agroquímicos</b></h6>
+                <p>Es fundamental promover prácticas agrícolas sostenibles que reduzcan el uso de pesticidas y
+                    fertilizantes químicos. El fomento de la agricultura orgánica y la implementación de técnicas de
+                    manejo integrado de plagas pueden ayudar a disminuir la contaminación del agua. Asimismo, la
+                    capacitación a los agricultores sobre el uso responsable de agroquímicos es una medida preventiva
+                    importante.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/gota.webp" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: rgb(78, 134, 255);"><b>Mejor manejo de residuos sólidos</b></h6>
+                <p>El establecimiento de programas de reciclaje y gestión adecuada de residuos sólidos es esencial para
+                    reducir el impacto ambiental en Ocotlán. La creación de centros de reciclaje y la promoción de la
+                    recolección selectiva de residuos son pasos clave para prevenir la contaminación por desechos
+                    sólidos en los cuerpos de agua. Además, la concientización pública sobre el impacto de los residuos
+                    en el medio ambiente es fundamental.</p>
+            </div>
+        </div>
+    </div>
+    {% endblock contenido %}

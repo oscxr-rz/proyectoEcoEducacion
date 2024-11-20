@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="{% static 'quiz/css/estilo.css' %}">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url("{% static 'quiz/img/fondo.jpg' %}");
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <br>
+        <h1>QUIZ</h1>
+        
+        <!-- Pantalla inicial -->
+        <div id="pantalla-inicial">
+            <p>¿Cuánto sabes sobre los problemas ambientales en Ocotlán?</p>
+            <button class="btn btn-primary" onclick="comenzarJuego()">COMENZAR A JUGAR</button>
+            <button class="btn btn-secondary" onclick="regresar()">REGRESAR</button>
+        </div>
+        
+        <!-- Pantalla juego -->
+        <div class="pantalla-juego" id="pantalla-juego" style="display:none;">
+            <p id="pregunta" style="font-weight: bold;"></p>
+            <div class="opciones">
+                <div class="opcion" id="op0" onclick="comprobarRespuesta(0)">
+                    <div class="letra" id="l0">A</div>
+                    <div class="nombre" id="n0">OPCION A</div>
+                </div>
+                <div class="opcion" id="op1" onclick="comprobarRespuesta(1)">
+                    <div class="letra" id="l1">B</div>
+                    <div class="nombre" id="n1">OPCION B</div>
+                </div>
+                <div class="opcion" id="op2" onclick="comprobarRespuesta(2)">
+                    <div class="letra" id="l2">C</div>
+                    <div class="nombre" id="n2">OPCION C</div>
+                </div>
+                <div class="opcion" id="op3" onclick="comprobarRespuesta(3)">
+                    <div class="letra" id="l3">D</div>
+                    <div class="nombre" id="n3">OPCION D</div>
+                </div>
+            </div>
+            <p>Tiempo restante: <span id="tiempo">15</span> segundos</p>
+            <p>Correctas: <span id="correctas">0</span></p>
+            <p>Puntos: <span id="puntos">0</span></p>
+        </div>
+        
+        <!-- Pantalla final -->
+        <div id="pantalla-final" style="display:none;">
+            <h2>CORRECTAS: <span id="numCorrectas">0</span></h2>
+            <h2>INCORRECTAS: <span id="numIncorrectas">0</span></h2>
+            <h2>PUNTOS: <span id="puntuacionFinal">0</span></h2>
+            <button class="btn btn-primary" onclick="comenzarJuego()">VOLVER A JUGAR</button>
+            <button class="btn btn-secondary" onclick="regresar()">SALIR DEL JUEGO</button>
+        </div>
+        
+        <!-- Formulario oculto para enviar la puntuación -->
+        <form id="puntuacionForm" method="post" action="{% url 'quiz' %}" style="display:none;">
+            {% csrf_token %}
+            <input type="hidden" name="usuario_nombre" id="usuario_nombre" value="{{ usuario.nombre }}">
+            <input type="hidden" name="cantidadAcertadas" id="cantidadAcertadas" value="0">
+            <input type="hidden" name="respuestas" id="respuestas">
+        </form>
+
+        <script>
+            function regresar() {
+                window.history.back();
+            }
+        </script>
+        
+        <script src="{% static 'quiz/js/script.js' %}"></script>
+    </div>
+</body>
+</html>

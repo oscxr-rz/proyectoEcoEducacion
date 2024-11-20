@@ -1,0 +1,63 @@
+{% extends "layouts/navbase.html" %}
+{% load static %}
+{% block contenido %}
+
+<!-- Section: Design Block -->
+<section class="" style="min-height: 100vh;">
+  <!-- Jumbotron -->
+  <div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+    <div class="container">
+      <div class="row gx-lg-5 align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <h1 class="my-5 display-3 fw-bold ls-tight">
+            <br />
+            <span class="text-primary">¿Qué tanto comprendiste?</span>
+          </h1>
+          <p style="color: hsl(217, 10%, 50.8%)">
+            Por favor, ingrese un nombre de usuario para poder jugar y registrar su puntuación.
+          </p>
+        </div>
+
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="card">
+            <div class="card-body py-5 px-md-5">
+              <form method="post">
+                {% csrf_token %}
+                <!-- Campo de nombre de usuario -->
+                <div class="mb-4">
+                  <div data-mdb-input-init class="form-outline">
+                    {{ form.nombre.label_tag }}
+                    {{ form.nombre }}
+                  </div>
+                </div>
+
+                <!-- Mostrar mensaje de error si el usuario ya existe -->
+                {% if form.errors %}
+                  <div class="alert alert-danger">
+                    {% for field in form %}
+                      {% for error in field.errors %}
+                        <p>{{ error }}</p>
+                      {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                      <p>{{ error }}</p>
+                    {% endfor %}
+                  </div>
+                {% endif %}
+
+                <!-- Submit button -->
+                <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block mb-4">
+                  Registrar
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Jumbotron -->
+</section>
+<!-- Section: Design Block -->
+
+{% endblock contenido %}

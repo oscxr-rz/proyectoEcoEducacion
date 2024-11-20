@@ -1,0 +1,151 @@
+{% extends "layouts/navbase.html" %}
+{% load static %}
+{% block contenido %}
+
+    <!-- Header Start -->
+    <div class="container-fluid page-header1">
+        <div class="container">
+            <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
+                <h3 class="display-4 text-center text-uppercase" style="color: white;">Deforestación en Ocotlán de Morelos</h3>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+
+    <!-- Comment List Start -->
+    <div class="bg-white" style="padding: 30px; margin: 30px;">
+
+        <h1 class="mb-3" style="color: #603a18;">Contexto geográfico y ecológico</h1>
+        <div class="media" style="display: flex; flex-wrap: wrap; align-items: center;">
+            <img src="{% static "app_inicio/img/ocotlan.jpg" %}" alt="Image" class="img-fluid"
+                style="width: 100%; max-width: 300px; margin-bottom: 20px;">
+            <div class="media-body" style="flex: 1; margin: 10px; width: 100%;">
+                <p>Ocotlán de Morelos es un municipio ubicado en la región de los Valles Centrales de Oaxaca, una de las
+                    zonas más biodiversas del país. Esta región es hogar de una gran variedad de flora y fauna, lo que
+                    la convierte en una de las más importantes desde el punto de vista ecológico (García et al., 2021).
+                    La vegetación predominante en Ocotlán incluye bosques de pino-encino, que son vitales para la
+                    regulación del ciclo hidrológico y la mitigación del cambio climático (SEMARNAT, 2017).</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="bg-white" style="padding: 30px; margin-bottom: 30px; margin: 30px;">
+        <h1 class="mb-3  text-center">Causas de la deforestación</h1>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/madera.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: #603a18;"><b>Agricultura y ganadería</b></h6>
+                <p>La expansión de la frontera agrícola y ganadera es una de las principales causas de la pérdida de
+                    cobertura forestal en Ocotlán. Según el Instituto Nacional de Ecología y Cambio Climático (INECC,
+                    2020), las actividades agrícolas, especialmente el cultivo de maíz, frijol y la ganadería extensiva,
+                    son responsables de la conversión de los bosques en tierras de cultivo y pastoreo.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/madera.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: #603a18;"><b>Extracción ilegal de madera</b></h6>
+                <p>La tala ilegal de madera para la venta de recursos forestales es otra causa significativa de
+                    deforestación en la región. La falta de vigilancia y el mercado informal de productos derivados del
+                    bosque, como madera y leña, incentivan esta actividad (Camarillo, 2019).</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/madera.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: #603a18;"><b>Cambiabilidad del clima</b></h6>
+                <p>La alteración de los patrones climáticos también juega un papel importante. La disminución de las
+                    lluvias y el aumento de temperaturas contribuyen a la fragilidad de los ecosistemas forestales
+                    (CONABIO, 2021). Esto aumenta la susceptibilidad de los bosques a incendios forestales, que son
+                    comunes en la región.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/madera.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: #603a18;"><b>Urbanización</b></h6>
+                <p>El crecimiento de la población y la expansión de las zonas urbanas, especialmente en las áreas
+                    cercanas a la cabecera municipal de Ocotlán, también han llevado a la destrucción de áreas
+                    forestales para la construcción de viviendas y otras infraestructuras (SEMARNAT, 2018).</p>
+            </div>
+        </div>
+
+
+
+        <h1 class="mb-3  text-center">Consecuencias de la deforestación</h1>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/tronco.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: #603a18;"><b>Pérdida de biodiversidad</b></h6>
+                <p>La deforestación pone en riesgo la biodiversidad de la región, ya que muchos animales y plantas
+                    dependen de los bosques para su supervivencia. Según un informe de la Comisión Nacional para el
+                    Conocimiento y Uso de la Biodiversidad (CONABIO, 2019), especies endémicas de la región, como el
+                    jaguar y el quetzal, enfrentan una creciente amenaza debido a la destrucción de su hábitat natural.
+                </p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/tronco.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: #603a18;"><b>Degradación del suelo</b></h6>
+                <p>La tala y la agricultura intensiva contribuyen a la erosión del suelo, lo que afecta la fertilidad y
+                    la capacidad de retención de agua de los terrenos. Esto puede generar problemas adicionales, como
+                    deslizamientos de tierra e inundaciones en la temporada de lluvias (SEMARNAT, 2017).</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/tronco.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: #603a18;"><b>Cambio climático</b></h6>
+                <p>Los bosques de Ocotlán juegan un papel crucial en la captura de carbono, lo que contribuye a la
+                    mitigación del cambio climático. La deforestación reduce esta capacidad, lo que agrava el
+                    calentamiento global (INECC, 2020).</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/tronco.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 60px;">
+            <div class="media-body">
+                <h6 style="color: #603a18;"><b>Impacto en las comunidades locales</b></h6>
+                <p>La deforestación afecta directamente a las comunidades que dependen de los recursos forestales para
+                    su subsistencia, como leña, agua y alimentos. Además, la pérdida de los servicios ecosistémicos
+                    impacta la agricultura y la calidad de vida de los habitantes (González et al., 2021).</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- Comment List End -->
+
+    <div class="bg-white mb-3" style="padding: 30px; margin: 30px; width: calc(100% - 60px);">
+
+        <h2 class="mb-3">Políticas y respuestas ante la deforestación en Ocotlán</h2>
+        <p>A nivel federal y estatal, se han implementado diversas políticas y programas para frenar la deforestación.
+            El Programa Nacional Forestal (PRONAFOR) y el Programa de Pago por Servicios Ambientales (PSA) son algunas
+            de las iniciativas que buscan promover la conservación de los recursos naturales a través de incentivos
+            económicos y la restauración de ecosistemas dañados (SEMARNAT, 2021). Sin embargo, la implementación de
+            estas políticas se enfrenta a varios desafíos, como la falta de recursos para la vigilancia y la limitada
+            participación de las comunidades locales en las decisiones ambientales.</p>
+
+        <p>En el ámbito local, las autoridades municipales y las organizaciones no gubernamentales (ONG) han promovido
+            proyectos de reforestación y conservación de los bosques. Sin embargo, la efectividad de estas iniciativas
+            depende en gran medida de la cooperación de las comunidades y de la correcta implementación de las políticas
+            (Camarillo, 2019).</p>
+        <center>
+            <img src="{% static "app_inicio/img/reforestacion.jpg" %}" alt="Image" class="img-fluid mr-3 mt-1">
+        </center>
+    </div>
+
+
+
+    {% endblock contenido %}

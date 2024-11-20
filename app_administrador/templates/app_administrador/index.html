@@ -1,0 +1,75 @@
+{% extends "nav/nav.html" %}
+{% load static %}
+{% block contenido %}
+
+    <h1 class="h3 mb-2 text-gray-800">Resultados del Quiz</h1>
+    <p class="mb-4">Esta gráfica muestra las categorías de conocimiento basadas en el número de respuestas correctas en el quiz.</p>
+
+    <div class="row">
+        <div class="col-xl-12 col-lg-12">
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold text-primary">Categorías de Conocimiento</h6>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container" style="height: 500px;">
+                        <canvas id="conocimientoPieChart"></canvas>
+                    </div>
+                    <hr>
+                    <p><strong>0-5:</strong> Necesita Capacitación ({{ data.mal_pct }}%)</p>
+                    <p><strong>6-10:</strong> Sigue Aprendiendo ({{ data.mas_o_menos_pct }}%)</p>
+                    <p><strong>11-15:</strong> ¡Sigue Así! ({{ data.bien_pct }}%)</p>
+                    <p><strong>16-20:</strong> ¡Excelente! ({{ data.excelente_pct }}%)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock contenido %}
+
+{% block blockjs %}
+
+<script>
+    // Datos para la gráfica de pastel
+    var ctx = document.getElementById("conocimientoPieChart").getContext("2d");
+    var conocimientoPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            labels: ["Necesita Capacitación (0-5 correctas)", "Sigue Aprendiendo (6-10 correctas)", "¡Sigue Así! (11-15 correctas)", "¡Excelente! (16-20 correctas)"],
+            datasets: [{
+                data: [{{ data.mal }}, {{ data.mas_o_menos }}, {{ data.bien }}, {{ data.excelente }}],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(255, 159, 64, 0.2)',
+                    'rgba(255, 205, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(255, 159, 64, 1)',
+                    'rgba(255, 205, 86, 1)',
+                    'rgba(75, 192, 192, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top',
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(tooltipItem) {
+                            return tooltipItem.label + ': ' + tooltipItem.raw + ' respuestas';
+                        }
+                    }
+                }
+            }
+        }
+    });
+</script>
+
+{% endblock blockjs %}

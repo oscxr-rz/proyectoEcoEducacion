@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'login/css/style.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+</head>
+<body>
+    <img class="wave" src="{% static 'login/img/wave.png' %}">
+    <div class="container-fluid d-flex justify-content-center align-items-center min-vh-100">
+        <div class="img">
+            <img src="{% static 'login/img/bg.png' %}">
+        </div>
+        <div class="row w-100">
+            <div class="col-12 col-md-8 col-lg-6 mx-auto">
+                <div class="login-content text-center">
+                    <form method="post">
+                        {% csrf_token %}
+                        <img src="{% static 'login/img/avatar.svg' %}" class="img-fluid mb-3">
+                        <h2 class="title">Bienvenido</h2>
+                        <div class="input-div one">
+                            <div class="i">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="div">
+                                {{ form.username.label_tag }}
+                                {{ form.username }}
+                            </div>
+                        </div>
+                        <div class="input-div pass">
+                            <div class="i">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <div class="div">
+                                {{ form.password.label_tag }}
+                                {{ form.password }}
+                            </div>
+                        </div>
+                        <!-- Mostrar mensajes de error del formulario -->
+                        {% if form.errors %}
+                            <div class="alert alert-danger">
+                                {% for field, errors in form.errors.items %}
+                                    {% for error in errors %}
+                                        <p>{{ error }}</p>
+                                    {% endfor %}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                        <input type="submit" class="btn btn-primary btn-block" value="Ingresar">
+                        <input type="reset" class="btn btn-secondary btn-block" value="Limpiar">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrap.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{% static 'login/js/main.js' %}"></script>
+</body>
+</html>

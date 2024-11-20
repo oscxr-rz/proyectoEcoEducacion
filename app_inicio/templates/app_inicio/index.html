@@ -1,0 +1,364 @@
+{% extends "layouts/navbase.html" %}
+{% load static %}
+{% block contenido %}
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{% static 'app_inicio/img/prob_ambientales.jpeg' %}" alt="Image" style="height: 100vh;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-3 text-uppercase text-white mb-md-4">Problemas Ambientales</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img class="w-100" src="{% static 'app_inicio/img/eco-educacion.jpg' %}" alt="Image" style="height: 100vh;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="display-3 text-uppercase text-white mb-md-4">Eco Educación</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#header-carousel" data-slide="prev">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-prev-icon mb-n2"></span>
+                </div>
+            </a>
+            <a class="carousel-control-next" href="#header-carousel" data-slide="next">
+                <div class="btn btn-dark" style="width: 45px; height: 45px;">
+                    <span class="carousel-control-next-icon mb-n2"></span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Carousel End -->
+
+    <!-- About Start -->
+    <div class="container-fluid py-5">
+        <div class="container pt-5">
+            <div class="row">
+                <div class="col-lg-6" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-100 h-100" src="{% static "app_inicio/img/MEDIO-AMBIENTE.webp" %}"
+                            style="object-fit: cover;">
+                    </div>
+                </div>
+                <div class="col-lg-6 pt-5 pb-lg-5">
+                    <div class="about-text bg-white p-4 p-lg-5 my-lg-5">
+                        <h1 class="mb-3">¿Qué son los problemas ambientales?</h1>
+                        <p>Los problemas ambientales son situaciones, fenómenos o procesos que afectan negativamente al
+                            entorno natural,
+                            alterando los equilibrios ecológicos, la biodiversidad, los recursos naturales y la calidad
+                            de vida humana.
+                            Estos problemas surgen principalmente como consecuencia de las actividades humanas, aunque
+                            también pueden ser
+                            originados por fenómenos naturales. Los problemas ambientales abarcan un amplio espectro de
+                            cuestiones, como la
+                            contaminación del aire, agua y suelo, la deforestación, la pérdida de biodiversidad, el
+                            cambio climático, la sobreexplotación
+                            de recursos naturales, y la gestión inadecuada de los residuos.</p>
+                        <div class="row mb-4">
+                            <div class="col-6">
+                                <img class="img-fluid" src="{% static "app_inicio/img/problemas_ambientales.jpg" %}" alt="">
+                            </div>
+                            <div class="col-6">
+                                <img class="img-fluid" src="{% static "app_inicio/img/problemas_ambientales2.jpg" %}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid pb-5">
+        <br>
+        <br>
+        <h1 class="mb-3  text-center">Tipos problemas ambientales</h1>
+        <br>
+        <div class="container pb-5">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
+                            style="height: 100px; width: 100px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <i class="fas fa-leaf" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class=""><strong>Contaminación</strong></h5>
+                            <p class="m-0">Introducción de sustancias nocivas en el aire, agua o suelo que alteran su
+                                composición natural y afectan la salud humana, animal y vegetal.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
+                            style="height: 100px; width: 100px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <i class="fas fa-leaf" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class=""><strong>Cambio climático</strong></h5>
+                            <p class="m-0">Alteraciones a largo plazo en el clima de la Tierra, causando temperaturas
+                                más altas, derretimiento de los polos y fenómenos climáticos extremos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" id="saltodiv">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
+                            style="height: 100px; width: 100px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <i class="fas fa-leaf" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class=""><strong>Deforestación</strong></h5>
+                            <p class="m-0">Es la tala masiva de bosques, especialmente en zonas tropicales, causa
+                                pérdida de hábitats naturales para diversas especies.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
+                            style="height: 100px; width: 100px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <i class="fas fa-leaf" style="font-size: 3rem; color: white;"></i>
+                        </div>
+                        <div class="d-flex flex-column">
+                            <h5 class=""><strong>Pérdida de biodiversidad</strong></h5>
+                            <p class="m-0">Es el resultado de prácticas insostenibles, contaminación, cambio climático y
+                                caza ilegal, que llevan a la extinción de especies y disminución de biodiversidad.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="d-flex mb-4 mb-lg-0">
+                        <div class="d-flex flex-shrink-0 align-items-center justify-content-center bg-primary mr-3"
+                            style="height: 100px; width: 100px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                            <i class="fas fa-leaf" style="font-size: 3rem; color: white;"></i>
+                        </div>
+
+                        <div class="d-flex flex-column">
+                            <h5 class=""><strong>Destrucción de ecosistemas</strong></h5>
+                            <p class="m-0">Ocurre cuando la urbanización, la agricultura intensiva y actividades
+                                extractivas alteran hábitats naturales.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+    <!-- Comment List Start -->
+    <div class="bg-white" style="padding: 30px; margin-bottom: 30px; margin: 30px;">
+        <h1 class="mb-3  text-center">Causas</h1>
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/hoja.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #7AB730;"><b>Sobrepoblación</b></h6>
+                <p>El rápido crecimiento de la población mundial aumenta la demanda de recursos naturales como agua,
+                    alimentos, energía y tierras, lo que ejerce una presión significativa sobre los ecosistemas.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src= "{% static "app_inicio/img/hoja.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #7AB730;"><b>Uso excesivo de recursos naturales</b></h6>
+                <p>La extracción y explotación intensiva de recursos naturales, como petróleo, minerales, bosques y
+                    agua, a menudo se realiza sin tener en cuenta su capacidad de regeneración.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/hoja.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #7AB730;"><b>Contaminación industrial</b></h6>
+                <p>Las industrias, a menudo sin las tecnologías adecuadas para el tratamiento de residuos, vierten
+                    contaminantes en el aire, agua y suelo, lo que contribuye a la contaminación.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/hoja.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #7AB730;"><b>Desarrollo urbano descontrolado</b></h6>
+                <p>La expansión de las ciudades y la urbanización no planificada conlleva la destrucción de hábitats
+                    naturales, la alteración de cursos de agua, y la producción de grandes cantidades de desechos.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/hoja.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #7AB730;"><b>Agricultura intensiva y ganadería</b></h6>
+                <p>La agricultura industrial y la ganadería, junto con el uso de agroquímicos como pesticidas y
+                    fertilizantes, son responsables de la degradación de los suelos, la contaminación del agua y la
+                    pérdida de biodiversidad.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src= "{% static "app_inicio/img/hoja.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #7AB730;"><b>Destrucción de hábitats naturales</b></h6>
+                <p>La expansión de áreas agrícolas, la minería y la construcción de infraestructuras destruyen los
+                    hábitats naturales de muchas especies, llevando a la extinción o desplazamiento de especies animales
+                    y vegetales.</p>
+            </div>
+        </div>
+        <br>
+
+
+
+        <h1 class="mb-3  text-center">Efectos</h1>
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/hoja2.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #d29a3a;"><b>Cambio climático</b></h6>
+                <p>Los efectos del cambio climático incluyen fenómenos climáticos extremos, como huracanes, tormentas,
+                    sequías y olas de calor, que afectan la vida humana, los ecosistemas, y las economías locales. El
+                    aumento de la temperatura global también está provocando el derretimiento de los glaciares y el
+                    aumento del nivel del mar, lo que pone en peligro a las poblaciones costeras.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/hoja2.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #d29a3a;"><b>Pérdida de biodiversidad</b></h6>
+                <p>La extinción de especies animales y vegetales puede alterar los ecosistemas y afectar los servicios
+                    ecosistémicos esenciales como la polinización, el control de plagas y la purificación del aire y
+                    agua.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/hoja2.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #d29a3a;"><b>Degradación de la salud humana</b></h6>
+                <p>La contaminación del aire, agua y suelo puede causar una amplia gama de problemas de salud, incluidos
+                    trastornos respiratorios, enfermedades cardiovasculares, cáncer y problemas gastrointestinales.
+                    Además, la falta de acceso a agua potable y condiciones sanitarias adecuadas agrava la situación.
+                </p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/hoja2.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #d29a3a;"><b>Desastres naturales</b></h6>
+                <p>La deforestación y la degradación del suelo aumentan la vulnerabilidad de las comunidades a desastres
+                    naturales como inundaciones y deslizamientos de tierra, ya que los ecosistemas naturales, como los
+                    bosques y las cuencas hidrográficas, desempeñan un papel crucial en la prevención de estos
+                    fenómenos.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/hoja2.png" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #d29a3a;"><b>Escasez de recursos</b></h6>
+                <p>La sobreexplotación de los recursos naturales puede llevar a la escasez de alimentos, agua y otros
+                    recursos vitales, afectando la seguridad alimentaria y los medios de vida de millones de personas,
+                    especialmente en las regiones más vulnerables.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Comment List End -->
+
+
+    <!-- Registration Start -->
+    <div class="container-fluid bg-registration py-5" style="margin: 90px 0;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-12 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h1 class="text-white"><span class="text-primary">ECO</span> EDUCACIÓN</h1>
+                    </div>
+                    <p class="text-white">Es un proceso de aprendizaje que integra principios ecológicos en diferentes
+                        áreas del conocimiento,
+                        buscando generar un cambio de mentalidad en las personas sobre su relación con el entorno.
+                        Es un enfoque educativo que promueve la comprensión de los ecosistemas, el cambio climático, la
+                        conservación de recursos y la biodiversidad,
+                        entre otros temas. Se aplica en todos los niveles educativos, desde la educación infantil hasta
+                        la universitaria y
+                        también en programas de educación no formal.</p>
+                    <br>
+                    <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Beneficios</h6>
+                    <ul class="list-inline text-white m-0">
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Desarrollo de conciencia ambiental
+                        </li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Cambio de hábitos</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Empoderamiento de la comunidad
+                        </li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Mejora del bienestar social</li>
+                        <li class="py-2"><i class="fa fa-check text-primary mr-3"></i>Prevención de la degradación
+                            ambiental</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Registration End -->
+
+    <!-- Comment List Start -->
+    <div class="bg-white" style="padding: 30px; margin-bottom: 30px; margin: 30px;">
+        <h1 class="mb-3  text-center">Enfoques principales</h1>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/ecoEduicono.webp" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #355410;"><b>Enfoque de la educación para la sostenibilidad (ESD)</b></h6>
+                <p>La Educación para el Desarrollo Sostenible (EDS) se refiere a un enfoque de la educación que aborda
+                    la sostenibilidad desde diversas perspectivas: ambiental, económica, social y cultural. La EDS se
+                    basa en el aprendizaje activo y colaborativo, y se enfoca en la adquisición de competencias
+                    necesarias para afrontar los retos globales, como el cambio climático, la desigualdad social y la
+                    pérdida de biodiversidad.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/ecoEduicono.webp" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #355410;"><b>Pedagogía crítica y ecoeducación</b></h6>
+                <p>En la última década, se ha promovido un enfoque pedagógico crítico en la ecoeducación. Este enfoque
+                    se fundamenta en la idea de que los problemas ambientales no son solo problemas técnicos, sino
+                    también problemas sociales, económicos y políticos. La pedagogía crítica anima a los estudiantes a
+                    cuestionar las estructuras de poder y a reflexionar sobre cómo las desigualdades sociales influyen
+                    en la crisis ambiental. De esta manera, la ecoeducación se convierte en una herramienta para la
+                    justicia social y ambiental.</p>
+            </div>
+        </div>
+
+        <div class="media mb-4">
+            <img src="{% static "app_inicio/img/ecoEduicono.webp" %}" alt="Image" class="img-fluid mr-3 mt-1" style="width: 45px;">
+            <div class="media-body">
+                <h6 style="color: #355410;"><b>Ecoeducación en la práctica</b></h6>
+                <p>La ecoeducación no solo se enseña en las aulas, sino también en las comunidades. La implementación de
+                    proyectos ecológicos en las escuelas y en la sociedad, como los huertos urbanos o los programas de
+                    reciclaje, son ejemplos de cómo se lleva la ecoeducación al plano práctico. Estos proyectos fomentan
+                    una comprensión directa y experiencial de los conceptos ambientales.</p>
+            </div>
+        </div>
+
+
+    </div>
+
+
+{% endblock contenido %}
